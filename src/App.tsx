@@ -12,9 +12,9 @@ const queryClient = new QueryClient();
 const getBasename = () => {
   const pathname = window.location.pathname;
   
-  // If the pathname starts with /Portfolio-Website, use it as the base
-  if (pathname.includes('/Portfolio-Website')) {
-    return '/Portfolio-Website/';
+  // If the pathname starts with /Portfolio-website, use it as the base
+  if (pathname.includes('/Portfolio-website')) {
+    return '/Portfolio-website/';
   }
   
   // Otherwise use root
