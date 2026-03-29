@@ -16,7 +16,7 @@ const projects = [
     desc: "Developed a full-stack FastAPI interview platform with 1-on-1 video rooms, real-time chat, Monaco code editor, Clerk authentication, secure code execution with automated feedback, live dashboards, and optimized data handling using TanStack Query, deployed on Render",
     tech: ["FastAPI", "React", "Inngest", "Stream", "Clerk"],
     color: "from-accent/10 to-primary/10",
-    codeUrl: "https://github.com/Neeraj111010/Interview-Platform",
+    codeUrl: "https://github.com/coughlmao/FARM-talent-iq",
     demoUrl: "https://farm-talent-iq.onrender.com",
   },
   {
