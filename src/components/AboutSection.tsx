@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Code2, Server, Database, Zap, GitBranch, Terminal } from "lucide-react";
+import { Code2, Server, Database, Zap, GitBranch, Terminal, Cpu} from "lucide-react";
 
 const highlights = [
   { icon: Server, label: "Backend Dev", desc: "Node.js, FastAPI, NestJS — building robust APIs and microservices" },
+  { icon: Cpu, label: "AI Engineering", desc: "LangGraph, LangChain — building multi-agent pipelines, RAG, and tool execution" },
   { icon: Database, label: "Databases", desc: "PostgreSQL, MongoDB, Redis — designing schemas and optimizing queries" },
   { icon: Zap, label: "Performance", desc: "Caching, pub/sub, and scalable architecture patterns" },
   { icon: GitBranch, label: "DevOps", desc: "Docker, CI/CD, GitHub Actions — automating deployments" },
-  { icon: Terminal, label: "Testing", desc: "Jest, PyTest — writing reliable, well-tested code" },
-];
+]
 
 const containerVariants = {
   hidden: {},
@@ -49,8 +49,7 @@ const AboutSection = () => (
           transition={{ duration: 0.6 }}
         >
           <p className="text-muted-foreground leading-relaxed">
-            I'm a software developer with hands-on experience building backend services and APIs.
-            I focus on writing clean, testable code and designing systems that scale.
+             I'm a software developer with hands-on experience building backend services and APIs. I focus on writing clean, testable code, designing systems that scale, and architecting intelligent, agentic AI pipelines using LangGraph and LLMs.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             My internship at <span className="text-primary font-medium">ModelSuite AI</span> sharpened 

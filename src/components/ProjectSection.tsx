@@ -13,20 +13,22 @@ const projects = [
   },
   {
     title: "Interview Platform",
-    desc: "Developed a full-stack FastAPI interview platform with 1-on-1 video rooms, real-time chat, Monaco code editor, Clerk authentication, secure code execution with automated feedback, live dashboards, and optimized data handling using TanStack Query, deployed on Render",
-    tech: ["FastAPI", "React", "Inngest", "Stream", "Clerk"],
+    desc: "Developed a full-stack FastAPI interview platform with 1-on-1 video rooms, real-time chat, Monaco code editor, Clerk authentication, secure code execution with automated feedback, and live dashboards.",
+    tech: ["FastAPI", "React", "Langraph", "RAG", "Inngest", "Stream", "Clerk"],
     color: "from-accent/10 to-primary/10",
     codeUrl: "https://github.com/Neeraj111010/Interview-Platform",
     demoUrl: "https://farm-talent-iq.onrender.com",
   },
-  {
-    title: "AI Agent for Deep Research",
-    desc: "A modern AI-powered agent application built with Next.js, TypeScript, and multiple AI APIs. It delivers intelligent content retrieval, AI-generated responses, code highlighting, and efficient state management — all in a slick, responsive interface.",
-    tech: ["Next.js", "TypeScript", "Mistral API"],
-    color: "from-accent/10 to-primary/10",
-    codeUrl: "https://github.com/Neeraj111010/AI-Agent-for-Deep-Research",
-    // demoUrl intentionally omitted for this project
+   {
+    title: "AI Coaching Assistant",
+    desc: "Built a LangGraph-based AI assistant for LeetCode-style learning. Developed an intent router and a smart context formatter that turns raw database objects and code execution logs into clean prompts. Integrated a loop-back tool to handle code evaluation through a dedicated microservice, and implemented real-time event streaming to intercept and stream LLM responses instantly.",
+    tech: ["LangGraph", "LangChain", "FastAPI", "Express", "LLMs"],
+    color: "from-secondary/10 to-accent/10",
+    codeUrl: "https://github.com/coughlmao/TalentIQ-AI-Assistant-LangGraph-FastAPI",
+    demoUrl: "https://mern-interview-platform-talent-iq.onrender.com",
   },
+
+
 ];
 
 const containerVariants = {

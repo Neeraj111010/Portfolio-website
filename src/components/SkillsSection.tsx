@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Layers, Database, FlaskConical, Wrench } from "lucide-react";
+import { Code2, Layers, Database, FlaskConical, Wrench ,Brain } from "lucide-react";
 
 const categories = [
   {
@@ -65,6 +65,21 @@ const categories = [
       { name: "Docker", level: 75 },
     ],
   },
+
+  {
+  title: "AI Engineering",
+  icon: Brain,
+  accent: "from-fuchsia-500/20 to-indigo-500/20",
+  iconBg: "from-fuchsia-500 to-indigo-500",
+  hoverRing: "hover:ring-1 hover:ring-fuchsia-400/25",
+  skills: [
+    { name: "LangChain", level: 85 },
+    { name: "LangGraph", level: 85 },
+    { name: "RAG", level: 80 },
+    { name: "Multi-Agent Systems", level: 80 },
+    { name: "Vector Databases", level: 75 },
+  ],
+},
 ];
 
 const containerVariants = {
