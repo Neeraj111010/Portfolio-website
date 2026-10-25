@@ -27,7 +27,7 @@ jobs:
 
       - name: Build (bun)
         env:
-          VITE_BASE_PATH: /Portfolio-website/
+          VITE_BASE: /Portfolio-website/
         run: bun run build
 
       - name: Upload Pages artifact
