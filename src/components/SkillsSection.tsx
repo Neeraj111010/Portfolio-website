@@ -13,7 +13,7 @@ const categories = [
     title: "Frameworks",
     icon: Layers,
     iconBg: "from-violet-500 to-purple-500",
-    skills: ["Node.js", "Express.js", "FastAPI", "Nest.js", "React.js"],
+    skills: ["Node.js", "Express.js", "FastAPI", "React.js"],
   },
   {
     title: "Databases & Caching",
@@ -40,7 +40,7 @@ const categories = [
     title: "Testing",
     icon: FlaskConical,
     iconBg: "from-amber-500 to-orange-500",
-    skills: ["Jest", "PyTest"],
+    skills: ["Vitest", "PyTest"],
   },
   {
     title: "DevOps & Tools",
