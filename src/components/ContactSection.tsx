@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
+import ParallaxBlob from "./ParallaxBlob";
 import { Mail, Github, Linkedin, Send, MessageCircle, MapPin, ArrowUpRight } from "lucide-react";
 
 const links = [
   { icon: Mail, label: "Email", value: "ksneeraj204@gmail.com", href: "mailto:ksneeraj204@gmail.com" },
   { icon: Github, label: "GitHub", value: "github.com/Neeraj111010", href: "https://github.com/Neeraj111010", external: true },
-  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/ksneeraj", href: "https://www.linkedin.com/in/k-s-neeraj-5805322b8/", external: true },
+  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/k-s-neeraj", href: "https://www.linkedin.com/in/k-s-neeraj-5805322b8/", external: true },
 ];
 
 const ContactSection = () => (
-  <section id="contact" className="py-28 gradient-subtle relative overflow-hidden">
-    <div className="absolute top-20 right-0 w-96 h-96 rounded-full gradient-bg opacity-[0.04] blur-3xl" />
-    <div className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full gradient-bg opacity-[0.04] blur-3xl" />
+  <section id="contact" className="py-28 gradient-subtle aurora relative overflow-hidden">
+    <ParallaxBlob className="absolute top-20 right-0 w-96 h-96 rounded-full gradient-bg animate-blob opacity-[0.14] blur-3xl" />
+    <ParallaxBlob className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full gradient-bg animate-blob-slow opacity-[0.14] blur-3xl" />
 
     <div className="max-w-6xl mx-auto px-6 relative z-10">
       <motion.div
@@ -36,7 +37,7 @@ const ContactSection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="gradient-card card-inset rounded-2xl p-8 flex flex-col justify-between"
+          className="glass-card rounded-2xl p-8 flex flex-col justify-between"
         >
           <div>
             <div className="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center mb-6 shadow-elevated">
@@ -53,7 +54,7 @@ const ContactSection = () => (
           </div>
 
           <motion.a
-            href="mailto:ksneeraj204@egmail.com"
+            href="mailto:ksneeraj204@gmail.com"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center justify-center gap-2 gradient-bg text-primary-foreground px-8 py-3.5 rounded-xl font-medium hover:opacity-90 transition-opacity shadow-elevated w-full"
@@ -82,7 +83,7 @@ const ContactSection = () => (
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
               whileHover={{ x: 4 }}
-              className="gradient-card card-inset rounded-xl p-5 hover:shadow-elevated transition-all duration-300 flex items-center gap-4 group cursor-pointer"
+              className="glass-card rounded-xl p-5 transition-all duration-300 flex items-center gap-4 group cursor-pointer"
             >
               <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                 <link.icon className="w-4 h-4 text-primary-foreground" />
@@ -101,7 +102,7 @@ const ContactSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.5 }}
-            className="gradient-card card-inset rounded-xl p-5 text-center"
+            className="glass-card rounded-xl p-5 text-center"
           >
             <div className="flex items-center justify-center gap-2 mb-1">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />

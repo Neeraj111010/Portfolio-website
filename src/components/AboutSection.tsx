@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Code2, Server, Database, Zap, GitBranch, Terminal, Cpu} from "lucide-react";
+import ParallaxBlob from "./ParallaxBlob";
+import { Server, Database, Zap, GitBranch, Cpu } from "lucide-react";
 
 const highlights = [
   { icon: Server, label: "Backend Dev", desc: "Node.js, FastAPI, NestJS — building robust APIs and microservices" },
@@ -7,7 +8,7 @@ const highlights = [
   { icon: Database, label: "Databases", desc: "PostgreSQL, MongoDB, Redis — designing schemas and optimizing queries" },
   { icon: Zap, label: "Performance", desc: "Caching, pub/sub, and scalable architecture patterns" },
   { icon: GitBranch, label: "DevOps", desc: "Docker, CI/CD, GitHub Actions — automating deployments" },
-]
+];
 
 const containerVariants = {
   hidden: {},
@@ -22,8 +23,8 @@ const itemVariants = {
 };
 
 const AboutSection = () => (
-  <section id="about" className="py-28 gradient-subtle relative overflow-hidden">
-    <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full gradient-bg opacity-[0.04] blur-3xl" />
+  <section id="about" className="py-28 gradient-subtle aurora relative overflow-hidden">
+    <ParallaxBlob className="absolute -top-32 -right-32 w-96 h-96 rounded-full gradient-bg animate-blob opacity-[0.14] blur-3xl" />
 
     <div className="max-w-6xl mx-auto px-6 relative z-10">
       <motion.div
@@ -39,28 +40,34 @@ const AboutSection = () => (
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-12 items-start lg:grid-cols-1">
+      <div className="grid lg:grid-cols-5 gap-12 items-start">
         {/* Left column — text */}
         <motion.div
-          className="space-y-5"
+          className="lg:col-span-2 space-y-5"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <p className="text-muted-foreground leading-relaxed">
-             I'm a software developer with hands-on experience building backend services and APIs. I focus on writing clean, testable code, designing systems that scale, and architecting intelligent, agentic AI pipelines using LangGraph and LLMs.
+            I'm a software developer with hands-on experience building backend services and APIs. I focus on
+            writing clean, testable code, designing systems that scale, and architecting intelligent, agentic
+            AI pipelines using LangGraph and LLMs.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             My internship at <span className="text-primary font-medium">ModelSuite AI</span> sharpened 
             my skills in real-world production environments — from database design and caching strategies 
             to CI/CD pipelines and agile workflows.
           </p>
+          <p className="text-muted-foreground leading-relaxed">
+            I'm passionate about developer experience, open-source tools, and continuously learning 
+            new technologies to solve complex problems.
+          </p>
         </motion.div>
 
         {/* Right column — highlight cards in 2-col grid with breathing room */}
         <motion.div
-          className="grid sm:grid-cols-2 gap-6"
+          className="lg:col-span-3 grid sm:grid-cols-2 gap-5"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -70,7 +77,7 @@ const AboutSection = () => (
             <motion.div
               key={h.label}
               variants={itemVariants}
-              className="card-inset gradient-card rounded-xl p-6 hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 group"
+              className="glass-card rounded-xl p-6 hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <h.icon className="w-5 h-5 text-primary-foreground" />

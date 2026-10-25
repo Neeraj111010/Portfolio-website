@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ParallaxBlob from "./ParallaxBlob";
 import { Briefcase, MapPin, Calendar, ChevronRight, GraduationCap } from "lucide-react";
 
 const experiences = [
@@ -15,7 +16,7 @@ const experiences = [
       "Email bulk invitation for agency onboarding using nodemailer and redis and also used message queues for asynchronous processing of emails",
       "Wrote comprehensive unit and integration tests achieving high code coverage",
     ],
-    tech: ["Node.js", "Redis", "Docker", "GitHub Actions","MongoDB"],
+    tech: ["Node.js", "Redis", "Docker", "GitHub Actions", "MongoDB"],
   },
 ];
 
@@ -30,8 +31,8 @@ const education = [
 ];
 
 const ExperienceSection = () => (
-  <section id="experience" className="py-28 gradient-subtle relative overflow-hidden">
-    <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full gradient-bg opacity-[0.04] blur-3xl" />
+  <section id="experience" className="py-28 gradient-subtle aurora relative overflow-hidden">
+    <ParallaxBlob className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full gradient-bg animate-blob-slow opacity-[0.14] blur-3xl" />
 
     <div className="max-w-6xl mx-auto px-6 relative z-10">
       <motion.div
@@ -46,9 +47,9 @@ const ExperienceSection = () => (
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-10">
+      <div className="grid lg:grid-cols-3 gap-10">
         {/* Work experience — main column */}
-        <div>
+        <div className="lg:col-span-2">
           <div className="relative">
             <div className="absolute left-[19px] top-0 bottom-0 w-px bg-border hidden md:block" />
 
@@ -68,7 +69,7 @@ const ExperienceSection = () => (
                     </div>
                   </div>
 
-                  <div className="flex-1 gradient-card card-inset rounded-xl p-6 hover:shadow-elevated transition-shadow duration-300">
+                  <div className="flex-1 glass-card rounded-xl p-6 transition-shadow duration-300">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
                       <h3 className="font-bold text-lg text-foreground">{exp.role}</h3>
                       <span className="text-xs px-2.5 py-1 rounded-full gradient-bg text-primary-foreground font-medium">
@@ -103,7 +104,7 @@ const ExperienceSection = () => (
                     </ul>
                     <div className="flex flex-wrap gap-2">
                       {exp.tech.map((t) => (
-                        <span key={t} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-secondary text-muted-foreground border border-border">
+                        <span key={t} className="text-xs font-mono px-2.5 py-1 rounded-lg glass-pill text-muted-foreground">
                           {t}
                         </span>
                       ))}
@@ -115,9 +116,9 @@ const ExperienceSection = () => (
           </div>
         </div>
 
-        {/* Education block (stacked under experiences) */}
+        {/* Education sidebar */}
         <motion.div
-          className="space-y-6 mt-12"
+          className="space-y-6"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -125,7 +126,7 @@ const ExperienceSection = () => (
         >
           <h3 className="text-sm font-mono text-primary tracking-wider uppercase mb-4">Education</h3>
           {education.map((edu) => (
-            <div key={edu.school} className="gradient-card card-inset rounded-xl p-6">
+            <div key={edu.school} className="glass-card rounded-xl p-6">
               <div className="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center mb-4">
                 <edu.icon className="w-5 h-5 text-primary-foreground" />
               </div>
@@ -140,7 +141,7 @@ const ExperienceSection = () => (
           ))}
 
           {/* Extra CTA card */}
-          <div className="gradient-card card-inset rounded-xl p-6 text-center">
+          <div className="glass-card rounded-xl p-6 text-center">
             <p className="text-sm text-muted-foreground mb-3">Want to know more about my journey?</p>
             <a
               href="#contact"

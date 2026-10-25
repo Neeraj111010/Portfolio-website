@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
+import ParallaxBlob from "./ParallaxBlob";
 import { ExternalLink, Github, Folder, ArrowUpRight } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
 
 const projects = [
   {
@@ -19,16 +19,14 @@ const projects = [
     codeUrl: "https://github.com/coughlmao/FARM-talent-iq",
     demoUrl: "https://mern-interview-platform-talent-iq.onrender.com",
   },
-   {
+  {
     title: "AI Coaching Assistant",
     desc: "Built a LangGraph assistant for LeetCode-style learning, integrated with the core interview platform. Developed an intent router and a smart context formatter that maps database records and raw code execution logs from a custom sandbox into clean prompts. Engineered a loop-back tool to route code running tasks through a dedicated microservice workflow, utilizing real-time event streaming to intercept and stream LLM responses instantly without third-party sandboxes.",
     tech: ["LangGraph", "LangChain", "FastAPI", "Express", "Gemini AI", "RAG"],
-    color: "from-secondary/10 to-accent/10",
+    color: "from-primary/10 to-accent/10",
     codeUrl: "https://github.com/coughlmao/TalentIQ-AI-Assistant-LangGraph-FastAPI",
     demoUrl: "https://mern-interview-platform-talent-iq.onrender.com",
   },
-
-
 ];
 
 const containerVariants = {
@@ -42,8 +40,8 @@ const cardVariants = {
 };
 
 const ProjectsSection = () => (
-  <section id="projects" className="py-28 relative overflow-hidden">
-    <div className="absolute -bottom-32 left-1/2 w-[500px] h-[500px] rounded-full gradient-bg opacity-[0.03] blur-3xl" />
+  <section id="projects" className="py-28 relative overflow-hidden aurora">
+    <ParallaxBlob className="absolute -bottom-32 left-1/2 w-[500px] h-[500px] rounded-full gradient-bg animate-blob opacity-[0.12] blur-3xl" />
 
     <div className="max-w-6xl mx-auto px-6 relative z-10">
       <motion.div
@@ -73,7 +71,7 @@ const ProjectsSection = () => (
             key={p.title}
             variants={cardVariants}
             whileHover={{ y: -6 }}
-            className="gradient-card card-inset rounded-xl p-6 hover:shadow-elevated transition-all duration-300 group flex flex-col"
+            className="glass-card rounded-xl p-6 transition-all duration-300 group flex flex-col"
           >
             <div className="flex items-center justify-between mb-5">
               <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${p.color} flex items-center justify-center border border-border`}>
@@ -85,7 +83,7 @@ const ProjectsSection = () => (
                     href={p.codeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:-translate-y-0.5 duration-200"
+                    className="hover:text-primary hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <Github className="w-4 h-4" />
                   </a>
@@ -95,7 +93,7 @@ const ProjectsSection = () => (
                     href={p.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors hover:-translate-y-0.5 duration-200"
+                    className="hover:text-primary hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>
@@ -109,7 +107,7 @@ const ProjectsSection = () => (
             <p className="text-sm text-muted-foreground mb-5 leading-relaxed flex-1">{p.desc}</p>
             <div className="flex flex-wrap gap-2">
               {p.tech.map((t) => (
-                <span key={t} className="text-xs font-mono px-2.5 py-1 rounded-lg bg-secondary text-muted-foreground border border-border">
+                <span key={t} className="text-xs font-mono px-2.5 py-1 rounded-lg glass-pill text-muted-foreground">
                   {t}
                 </span>
               ))}

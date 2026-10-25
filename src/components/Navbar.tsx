@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle"
+import ThemeToggle from "./ThemeToggle";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
