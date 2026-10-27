@@ -3,7 +3,7 @@ import ParallaxBlob from "./ParallaxBlob";
 import { Server, Database, Zap, GitBranch, Cpu } from "lucide-react";
 
 const highlights = [
-  { icon: Server, label: "Backend Dev", desc: "Node.js, FastAPI, NestJS — building robust APIs and microservices" },
+  { icon: Server, label: "Backend Dev", desc: "Node.js, FastAPI — building robust APIs and microservices" },
   { icon: Cpu, label: "AI Engineering", desc: "LangGraph, LangChain — building multi-agent pipelines, RAG, and tool execution" },
   { icon: Database, label: "Databases", desc: "PostgreSQL, MongoDB, Redis — designing schemas and optimizing queries" },
   { icon: Zap, label: "Performance", desc: "Caching, pub/sub, and scalable architecture patterns" },
